@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #0ea5e9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.result-box {
+    background: #334155;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.risk-score {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.tip-box,
+.checks-box {
+    background: #475569;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.checks-box ul {
+    padding-left: 20px;
+}
+
+.checks-box li {
+    margin: 8px 0;
+}
+
+.history-section {
+    margin-top: 30px;
+}
+
+.history-section h2 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #0ea5e9;
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #475569;
+    text-align: center;
+}
+
+tr:hover {
+    background: #475569;
+}

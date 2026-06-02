@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Phishing URL Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔐 Smart Phishing URL Detector</h1>
+
+    <p class="subtitle">
+        Detect suspicious websites using cybersecurity checks
+    </p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="url"
+            placeholder="Enter website URL..."
+            required
+        >
+
+        <button type="submit">
+            Analyze URL
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result-box">
+
+        <h2 style="color: {{ color }};">
+            {{ result }}
+        </h2>
+
+        <p class="risk-score">
+            Risk Score:
+            <strong>{{ score }}%</strong>
+        </p>
+
+        <div class="tip-box">
+
+            <h3>🛡 Safety Tip</h3>
+
+            <p>{{ tip }}</p>
+
+        </div>
+
+        <div class="checks-box">
+
+            <h3>🔍 Security Checks</h3>
+
+            <ul>
+
+                {% for check in checks %}
+                    <li>{{ check }}</li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+    <div class="history-section">
+
+        <h2>📜 Scan History</h2>
+
+        <table>
+
+            <tr>
+                <th>URL</th>
+                <th>Result</th>
+            </tr>
+
+            {% for item in history %}
+
+            <tr>
+                <td>{{ item.url }}</td>
+                <td>{{ item.result }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
